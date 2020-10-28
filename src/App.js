@@ -12,8 +12,10 @@ function App() {
      
      <Routes>
           <Route path="/" element={<Header  />} /> 
-          <Route path="/chats" element={<Header backButton="/" />} /> 
-
+          <Route path="chats" element={<Header backButton="/" />} >
+           <Route path="/" element={<Chats  />} /> 
+            </Route> 
+        
        
       </Routes>
     </div>
