@@ -5,13 +5,16 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
+import TinderCards from './TinderCards';
 
 function App() {
   return (
     <div className="app">
      
      <Routes>
-          <Route path="/" element={<Header  />} /> 
+          <Route path="/" element={<Header  />} >
+            <TinderCards />
+          </Route> 
           <Route path="chats" element={<Header backButton="/" />} >
            <Route path="/" element={<Chats  />} /> 
             </Route> 
