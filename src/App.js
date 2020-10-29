@@ -6,21 +6,30 @@ import {
   Route
 } from 'react-router-dom';
 import TinderCards from './TinderCards';
+import SwipeButton from './SwipeButton';
+
 
 function App() {
   return (
     <div className="app">
      
      <Routes>
-          <Route path="/" element={<Header  />} >
-            <TinderCards />
+          <Route path="/" element={<>
+          
+          <Header  />
+          <TinderCards />
+          <SwipeButton />
+          </> } >
+            
+          
           </Route> 
-          <Route path="chats" element={<Header backButton="/" />} >
-           <Route path="/" element={<Chats  />} /> 
-            </Route> 
-        
-       
+          <Route path="chats" element={<><Header backButton="/" /> <Chats  /></>} />
+          
+          
+          
+                 
       </Routes>
+
     </div>
   );
 }
