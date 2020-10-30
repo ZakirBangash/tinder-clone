@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import TinderCards from "./TinderCards";
 import SwipeButton from "./SwipeButton";
 import { ProductProvider } from './Context';
+import ChatScreen from "./ChatScreen";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           element={
             <>
               <Header backButton="/chats" />            
-              <h2>How are YOu</h2>
+              <ChatScreen />
             </>
           }
         />

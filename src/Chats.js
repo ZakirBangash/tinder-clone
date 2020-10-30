@@ -1,7 +1,6 @@
 import React,{useContext} from 'react'
 import Chat from './Chat';
 import {
-    // rest of the elements/components imported remain same
     Outlet
   } from 'react-router-dom';
 
@@ -13,8 +12,10 @@ const Chats = () => {
     return (
         <div className="chats">
         
+            
+
             {Object.entries(storeProducts).map(([slug,{name,message,timestamp,profilePic}]) =>(
-                 <Chat name={name} message={message} timestamp={timestamp} profilePic={profilePic} /> 
+                 <Chat slug={slug} name={name} message={message} timestamp={timestamp} profilePic={profilePic} /> 
             )) }
                 
                 <Outlet /> 
