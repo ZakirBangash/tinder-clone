@@ -11,36 +11,31 @@ function App() {
     <ProductProvider>
     <div className="app">
       <Routes>
-        <Route
-          path="/"
-          element={
+
+        <Route path="/" element={
             <>
               <Header />
               <TinderCards />
               <SwipeButton />
             </>
           }
-        ></Route>
+        />
+
+        <Route path="chats"  >
+         
+         <Route path="/" element={<><Header backButton="/" /> <Chats /> </>} />
 
         <Route
-          path="chats"
+          path=":slug"
           element={
             <>
-              <Header backButton="/" /> <Chats />
-          
+              <Header backButton="/chats" />            
+              <h2>How are YOu</h2>
             </>
           }
         />
+      </Route>
 
-        <Route
-          path="chats/:person"
-          element={
-            <>
-              <Header backButton="/chats" /> 
-            <h2>How are YOu</h2>
-            </>
-          }
-        />
 
       </Routes>
     </div>
