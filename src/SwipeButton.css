@@ -1,4 +1,4 @@
-.swipeButton {
+ .swipeButton {
     position: fixed;
     bottom: 5vh;
     display: flex;
@@ -23,7 +23,7 @@
 
 .swipe__favorite {
     padding: 2vw !important;
-    color:#76e2b3 !important
+    color:#76e2b3 !important;
 }
 
 .swipe__star {
@@ -31,8 +31,7 @@
     color: #62b4f9 !important;
 }
 
-.swipe__flash {
+.swipe__flash { 
     padding: 2vw !important;
     color:#915dd1 !important
 }
-

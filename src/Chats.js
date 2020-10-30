@@ -1,10 +1,23 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import Chat from './Chat';
+import {
+    // rest of the elements/components imported remain same
+    Outlet
+  } from 'react-router-dom';
+
+  import { GlobalContext } from './Context'
+
 
 const Chats = () => {
-    console.log("Good im render here");
+    const {storeProducts} = useContext(GlobalContext);
     return (
         <div className="chats">
-            <h1>I am from Chat sections</h1>
+        
+            {Object.entries(storeProducts).map(([slug,{name,message,timestamp,profilePic}]) =>(
+                 <Chat name={name} message={message} timestamp={timestamp} profilePic={profilePic} /> 
+            )) }
+                
+                <Outlet /> 
         </div>
     )
 }
